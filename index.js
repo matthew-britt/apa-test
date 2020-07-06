@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     //console.log('hey cutie')
-    fetchInfo("Research");
+    fetchInfo("Tools and Tech");
 });
 
 function fetchInfo(group) {
