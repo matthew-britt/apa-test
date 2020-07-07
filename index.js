@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     //console.log('hey cutie')
-    fetchInfo("Tools and Tech");
+    fetchInfo("Research");
 });
 
 function fetchInfo(group) {
@@ -42,37 +42,49 @@ function fetchInfo(group) {
             var textnode1 = document.createTextNode(`${groupData.name} Working Group`);
             node1.appendChild(textnode1);
             document.getElementById("group").appendChild(node1);
+            
+            document.getElementById("groupName").innerText = groupData.name;
+            document.getElementById("lead").innerText = groupData.lead;
+            document.getElementById("email").innerText = groupData.email;
+            document.getElementById("history").innerText = groupData.history;
+            document.getElementById("agenda").innerText = groupData.agenda;
+            document.getElementById("keys").innerText = groupData.objectives;
 
-            var node2 = document.createElement("LI");
-            var textnode2 = document.createTextNode("Shared Working Group Folder: " + groupData.folder);
-            node2.appendChild(textnode2);
-            document.getElementById("list").appendChild(node2);
 
-            var node3 = document.createElement("LI");
-            var textnode3 = document.createTextNode("Lead: " + groupData.lead);
-            node3.appendChild(textnode3);
-            document.getElementById("list").appendChild(node3);
 
-            var node4 = document.createElement("LI");
-            var textnode4 = document.createTextNode("Working Group Email List: " + groupData.email);
-            node4.appendChild(textnode4);
-            document.getElementById("list").appendChild(node4);
 
-            var node5 = document.createElement("LI");
-            var textnode5 = document.createTextNode("Group Email History: " + groupData.history);
-            node5.appendChild(textnode5);
-            document.getElementById("list").appendChild(node5);
-
-            var node6 = document.createElement("LI");
-            var textnode6 = document.createTextNode("Living Agenda Document: " + groupData.agenda);
-            node6.appendChild(textnode6);
-            document.getElementById("list").appendChild(node6);
-
-            var node7 = document.createElement("LI");
-            var textnode7 = document.createTextNode("Key Objectives: " + groupData.objectives);
-            node7.appendChild(textnode7);
-            document.getElementById("list").appendChild(node7);
             console.log(groupData)
+
+            // var node2 = document.createElement("LI");
+            // var textnode2 = document.createTextNode("Shared Working Group Folder: " + groupData.folder);
+            // node2.appendChild(textnode2);
+            // document.getElementById("list").appendChild(node2);
+
+            // var node3 = document.createElement("LI");
+            // var textnode3 = document.createTextNode("Lead: " + groupData.lead);
+            // node3.appendChild(textnode3);
+            // document.getElementById("list").appendChild(node3);
+
+            // var node4 = document.createElement("LI");
+            // var textnode4 = document.createTextNode("Working Group Email List: " + groupData.email);
+            // node4.appendChild(textnode4);
+            // document.getElementById("list").appendChild(node4);
+
+            // var node5 = document.createElement("LI");
+            // var textnode5 = document.createTextNode("Group Email History: " + groupData.history);
+            // node5.appendChild(textnode5);
+            // document.getElementById("list").appendChild(node5);
+
+            // var node6 = document.createElement("LI");
+            // var textnode6 = document.createTextNode("Living Agenda Document: " + groupData.agenda);
+            // node6.appendChild(textnode6);
+            // document.getElementById("list").appendChild(node6);
+
+            // var node7 = document.createElement("LI");
+            // var textnode7 = document.createTextNode("Key Objectives: " + groupData.objectives);
+            // node7.appendChild(textnode7);
+            // document.getElementById("list").appendChild(node7);
+
 
         });
 };

@@ -1,27 +1,132 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <base target="_top">
+    <meta charset="UTF-8">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>HASS-test</title>
     <style>
+        
+
+        textarea {
+            width: 100%;
+            height: auto;
+        }
+
+
+        /* li {
+font-size: 12px;
+margin-left: 40px;
+list-style-type: none;
+font-weight: 400;
+} */
+
+        .nav {
+            margin-left: 20px;
+        }
+
         h1 {
             text-align: center;
             list-style-type: none;
+            font-family: Montserrat, sans-serif;
+            color: rgba(6, 65, 124, 1.0000000000);
+            font-size: 40pt;
+            font-weight: 700;
         }
 
-        ul {
+        /* ul  {
+            font-family: Montserrat, sans-serif;
+            color: rgba(6, 65, 124, 1.0000000000);
+            font-size: 12pt;
+            font-weight: 400;
+            margin-left: 40px;
             list-style-type: none;
+        } */
+
+        p {
+            margin-left: 40px;
         }
+        #keys {
+            margin-left: 140px;
+        }
+
+        /* #info {
+            font-family: Montserrat, sans-serif;
+            color: rgba(6, 65, 124, 1.0000000000);
+            font-size: 12pt;
+            font-weight: 400;
+            margin-left: 40px;
+            list-style-type: none;
+        } */
     </style>
 </head>
 
 <body>
+    <div class='nav'>
 
-    <h1 id="group"></h1>
-    <ul id="list"></ul>
+    </div>
+    <div id='main'>
+
+
+
+        <div class='row'>
+            <h1 id="group"></h1>
+            <div id="info">
+                <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
+                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Shared Working Group Folder:</span>
+                    <span role="link" class="I4aHG">
+                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="groupName">Click Here</span>
+                    </span>
+                </p>
+                <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
+                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Lead:</span>
+                    <span role="link" class="I4aHG">
+                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="lead"></span>
+                    </span>
+                </p>
+                <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
+                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Working Group Email List:</span>
+                    <span role="link" class="I4aHG">
+                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="email"></span>
+                    </span>
+                </p>
+                <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
+                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Group Email History:</span>
+                    <span role="link" class="I4aHG">
+                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="history">Click Here</span>
+                    </span>
+                </p>
+                <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
+                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Living Agenda Document</span>
+                    <span role="link" class="I4aHG">
+                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="agenda">Click Here</span>
+                    </span>
+                </p>
+                
+                <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
+                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Key Objectives:</span>
+                    <span role="link" class="I4aHG">
+                        <span  class="aw5Odc" data-ri="2" id="objectives"></span>
+                    </span>
+                </p>
+                <ul id="keys" style="padding: 0px; list-style-type: square; margin-left: 40px; margin-right: 0px;" class="n8H08c UVNKR"></ul>
+                
+                
+            </div>
+            <div>
+                <div id="signup-div">
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
 
     <script src="index.js"></script>
-
 </body>
 
 </html>
