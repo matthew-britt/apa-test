@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     //console.log('hey cutie')
-    fetchInfo("Research");
+    fetchInfo("Tools and Tech");
 });
 
 function fetchInfo(group) {
@@ -38,15 +38,39 @@ function fetchInfo(group) {
                     //console.log(groupData.folder)
                 }
             }
-            var node1 = document.createElement("LI");
-            var textnode1 = document.createTextNode(`${groupData.name} Working Group`);
+            let node1 = document.createElement("LI");
+            let textnode1 = document.createTextNode(`${groupData.name} Working Group`);
             node1.appendChild(textnode1);
             document.getElementById("group").appendChild(node1);
-            
-            document.getElementById("groupName").innerText = groupData.name;
+
+            let aGroup = document.createElement('a');
+            let linkTextGroup = document.createTextNode(groupData.folder);
+            aGroup.appendChild(linkTextGroup);
+            aGroup.title = "Click Here";
+            aGroup.href = groupData.folder;
+            document.getElementById("groupName").appendChild(aGroup);
+
+            let aEmail = document.createElement('a');
+            let linkTextEmail = document.createTextNode(groupData.email);
+            aEmail.appendChild(linkTextEmail);
+            aEmail.title = "Click Here";
+            aEmail.href = `mailto:${groupData.email}`;
+            document.getElementById("email").appendChild(aEmail)
+
+            let aHistory = document.createElement('a');
+            let linkTextHistory = document.createTextNode(groupData.history);
+            aHistory.appendChild(linkTextHistory);
+            aHistory.title = "Click Here";
+            aHistory.href = `https:${groupData.history}`;
+            document.getElementById("history").appendChild(aHistory)
+            console.log(aEmail)
+            console.log(aGroup)
+            console.log(aHistory)
+
+           // document.getElementById("groupName").innerText = groupData.name;
             document.getElementById("lead").innerText = groupData.lead;
-            document.getElementById("email").innerText = groupData.email;
-            document.getElementById("history").innerText = groupData.history;
+           // document.getElementById("email").innerText = groupData.email;
+            // document.getElementById("history").innerText = groupData.history;
             document.getElementById("agenda").innerText = groupData.agenda;
             document.getElementById("keys").innerText = groupData.objectives;
 
