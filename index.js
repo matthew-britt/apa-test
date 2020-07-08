@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     //console.log('hey cutie')
-    fetchInfo("Tools and Tech");
+    fetchInfo("Research");
 });
 
 function fetchInfo(group) {
@@ -61,7 +61,7 @@ function fetchInfo(group) {
             let linkTextHistory = document.createTextNode(groupData.history);
             aHistory.appendChild(linkTextHistory);
             aHistory.title = "Click Here";
-            aHistory.href = `https://${groupData.history}`;
+            aHistory.href = `${groupData.history}`;
             document.getElementById("history").appendChild(aHistory);
 
             let aAgenda = document.createElement('a');
