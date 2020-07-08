@@ -61,17 +61,26 @@ function fetchInfo(group) {
             let linkTextHistory = document.createTextNode(groupData.history);
             aHistory.appendChild(linkTextHistory);
             aHistory.title = "Click Here";
-            aHistory.href = `https:${groupData.history}`;
-            document.getElementById("history").appendChild(aHistory)
+            aHistory.href = `https://${groupData.history}`;
+            document.getElementById("history").appendChild(aHistory);
+
+            let aAgenda = document.createElement('a');
+            let linkTextAgenda = document.createTextNode(groupData.agenda);
+            aAgenda.appendChild(linkTextAgenda);
+            aAgenda.title = "Click Here";
+            aAgenda.href = `https://${groupData.agenda}`;
+            document.getElementById("agenda").appendChild(aAgenda);
             console.log(aEmail)
             console.log(aGroup)
             console.log(aHistory)
+            console.log(aAgenda)
 
-           // document.getElementById("groupName").innerText = groupData.name;
+
+            //document.getElementById("groupName").innerText = groupData.name;
             document.getElementById("lead").innerText = groupData.lead;
-           // document.getElementById("email").innerText = groupData.email;
-            // document.getElementById("history").innerText = groupData.history;
-            document.getElementById("agenda").innerText = groupData.agenda;
+            //document.getElementById("email").innerText = groupData.email;
+            //document.getElementById("history").innerText = groupData.history;
+            //document.getElementById("agenda").innerText = groupData.agenda;
             document.getElementById("keys").innerText = groupData.objectives;
 
 

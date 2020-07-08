@@ -46,9 +46,11 @@ font-weight: 400;
 
         p {
             margin-left: 40px;
+            font-size: 15px;
         }
         #keys {
             margin-left: 140px;
+            font-size: 15px;
         }
 
         /* #info {
@@ -76,7 +78,7 @@ font-weight: 400;
                 <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
                     <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Shared Working Group Folder:</span>
                     <span role="link" class="I4aHG">
-                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="groupName">Click Here</span>
+                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="groupName" > </span>
                     </span>
                 </p>
                 <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
@@ -94,13 +96,13 @@ font-weight: 400;
                 <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
                     <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Group Email History:</span>
                     <span role="link" class="I4aHG">
-                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="history">Click Here</span>
+                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="history"></span>
                     </span>
                 </p>
                 <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
                     <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Living Agenda Document</span>
                     <span role="link" class="I4aHG">
-                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="agenda">Click Here</span>
+                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="agenda"></span>
                     </span>
                 </p>
                 
