@@ -26,6 +26,7 @@ function fetchInfo(group) {
                     let agendaDocument = json.records[i]['fields']['Agenda Document'];
                     let keyObjectives = json.records[i]['fields']['Objectives'];
                     //let newKey = keyObjectives.replace("/\s\d\g", "\n");
+                   
                     // console.log(newKey)
                     // console.log(keyObjectives)
                     groupData.name = groupName;
@@ -48,6 +49,7 @@ function fetchInfo(group) {
             aGroup.appendChild(linkTextGroup);
             aGroup.title = "Click Here";
             aGroup.href = `${groupData.folder}`;
+            aGroup.target = "_blank";
             document.getElementById("groupName").appendChild(aGroup);
 
             let aEmail = document.createElement('a');
@@ -62,7 +64,12 @@ function fetchInfo(group) {
             aHistory.appendChild(linkTextHistory);
             aHistory.title = "Click Here";
             aHistory.href = `https://${groupData.history}`;
+            aHistory.innerText = "Click here"
             document.getElementById("history").appendChild(aHistory);
+            // document.getElementById("history").innerHTML = "Click here";
+            // document.getElementById("history").href = `https://${groupData.history}`;
+
+
 
             let aAgenda = document.createElement('a');
             let linkTextAgenda = document.createTextNode(groupData.agenda);
