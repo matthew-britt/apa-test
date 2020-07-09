@@ -47,7 +47,7 @@ function fetchInfo(group) {
             let linkTextGroup = document.createTextNode(groupData.folder);
             aGroup.appendChild(linkTextGroup);
             aGroup.title = "Click Here";
-            aGroup.href = groupData.folder;
+            aGroup.href = `${groupData.folder}&output=embed`;
             document.getElementById("groupName").appendChild(aGroup);
 
             let aEmail = document.createElement('a');
