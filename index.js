@@ -50,6 +50,7 @@ function fetchInfo(group) {
             aGroup.title = "Click Here";
             aGroup.href = `${groupData.folder}`;
             aGroup.target = "_blank";
+            //aGroup.innerText = "Click here"
             document.getElementById("groupName").appendChild(aGroup);
 
             let aEmail = document.createElement('a');
@@ -64,7 +65,8 @@ function fetchInfo(group) {
             aHistory.appendChild(linkTextHistory);
             aHistory.title = "Click Here";
             aHistory.href = `https://${groupData.history}`;
-            aHistory.innerText = "Click here"
+            aHistory.target = "_blank";
+            //aHistory.innerText = "Click here"
             document.getElementById("history").appendChild(aHistory);
             // document.getElementById("history").innerHTML = "Click here";
             // document.getElementById("history").href = `https://${groupData.history}`;
@@ -76,6 +78,8 @@ function fetchInfo(group) {
             aAgenda.appendChild(linkTextAgenda);
             aAgenda.title = "Click Here";
             aAgenda.href = `https://${groupData.agenda}`;
+            aAgenda.target = "_blank";
+            //aAgenda.innerText = "Click here"
             document.getElementById("agenda").appendChild(aAgenda);
             console.log(aEmail)
             console.log(aGroup)
