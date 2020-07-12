@@ -1,7 +1,14 @@
 
+
 document.addEventListener('DOMContentLoaded', () => {
     //console.log('hey cutie')
-    fetchInfo("Tools and Tech");
+    let params = new URLSearchParams(location.search);
+    let newParams = params.toString().replace('=', '').replace(/\+/g, ' ')
+    //console.log(params);
+    //console.log(newParams);
+    fetchInfo(newParams);
+
+    
 });
 
 function fetchInfo(group) {
