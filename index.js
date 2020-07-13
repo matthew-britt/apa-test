@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //console.log(newParams);
     fetchInfo(newParams);
 
-    fetchLead();
+    //fetchLead();
 });
 
 function fetchLead(leadName) {
@@ -20,22 +20,30 @@ function fetchLead(leadName) {
     .then(res => res.json())
     .then(json => {
         for (let i in json.records) {
-            if (json.records[i]['id'] && json.records[i]['id'] === leadName) {
+             if (json.records[i]['id'] === leadName) {
                 let name = json.records[i]['fields']['Name'];
                 let leadEmail = json.records[i]['fields']['Email'];
-
+// console.log(json.records[i]['id'])
+ console.log('hey')
                 let aLead = document.createElement('a');
                 let linkTextGroup = document.createTextNode(name);
                 aLead.appendChild(linkTextGroup);
-                aLead.innerText = `${name}`;
+                aLead.innerText = `\u00A0\u00A0${name}\u00A0\u00A0`;
                 aLead.href = `mailto:${leadEmail}`;
                 aLead.title = "Click Here";
                 aLead.target = "_blank";
-                document.getElementById("lead").appendChild(aLead);
+                document.getElementById("lead").appendChild(aLead); 
             }           
         }
     })
-}
+};
+
+function leadArray(arr) {
+    if (arr === undefined) return 'none';
+    for (let i = 0; i < arr.length; i++) {
+        fetchLead(arr[i]);
+    }
+};
 
 function fetchInfo(group) {
     fetch("https://api.airtable.com/v0/appI40FwYNAUQHKq3/tblJKfpNa4pA68rOV?", {
@@ -59,7 +67,7 @@ function fetchInfo(group) {
                     let agendaDocument = json.records[i]['fields']['Agenda Document'];
                     let keyObjectives = json.records[i]['fields']['Objectives'];
                     //let newKey = keyObjectives.replace("/\s\d\g", "\n");
-                   console.log(leads)
+                   //console.log(leads)
                     // console.log(newKey)
                     // console.log(keyObjectives)
                     groupData.name = groupName;
@@ -69,13 +77,13 @@ function fetchInfo(group) {
                     groupData.history = groupDiscussion;
                     groupData.agenda = agendaDocument;
                     groupData.objectives = keyObjectives;
-                    console.log(groupData.folder)
+                    //console.log(groupData.folder)
                 }
             }
-            
-            const leadArray = groupData.lead.forEach(lead => fetchLead(lead));
-            //fetchLead(groupData.lead[0]);
-            //console.log(groupData.lead)
+            let leads = groupData.lead
+            leadArray(leads);
+            //fetchLead(groupData.lead);
+            console.log(leads)
 
             let node1 = document.createElement("LI");
             let textnode1 = document.createTextNode(`${groupData.name} Working Group`);
