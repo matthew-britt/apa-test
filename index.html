@@ -82,7 +82,7 @@ font-weight: 400;
                     </span>
                 </p>
                 <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
-                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Lead:</span>
+                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Lead(s):</span>
                     <span role="link" class="I4aHG">
                         <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="lead"></span>
                     </span>

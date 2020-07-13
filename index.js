@@ -24,7 +24,7 @@ function fetchLead(leadName) {
                 let name = json.records[i]['fields']['Name'];
                 let leadEmail = json.records[i]['fields']['Email'];
 // console.log(json.records[i]['id'])
- console.log('hey')
+ //console.log('hey')
                 let aLead = document.createElement('a');
                 let linkTextGroup = document.createTextNode(name);
                 aLead.appendChild(linkTextGroup);
@@ -78,6 +78,7 @@ function fetchInfo(group) {
                     groupData.agenda = agendaDocument;
                     groupData.objectives = keyObjectives;
                     //console.log(groupData.folder)
+                    console.log(groupData.history)
                 }
             }
             let leads = groupData.lead
@@ -94,9 +95,13 @@ function fetchInfo(group) {
             let linkTextGroup = document.createTextNode(groupData.folder);
             aGroup.appendChild(linkTextGroup);
             aGroup.title = "Click Here";
-            aGroup.href = `${groupData.folder}`;
+            if (groupData.folder.includes('https://')) {
+                aGroup.href = `${groupData.folder}`;
+            } else {
+                aGroup.href = `https://${groupData.folder}`
+            };
             aGroup.target = "_blank";
-            //aGroup.innerText = "Click here"
+            aGroup.innerText = "Click here"
             document.getElementById("groupName").appendChild(aGroup);
 
             let aEmail = document.createElement('a');
@@ -110,9 +115,13 @@ function fetchInfo(group) {
             let linkTextHistory = document.createTextNode(groupData.history);
             aHistory.appendChild(linkTextHistory);
             aHistory.title = "Click Here";
-            aHistory.href = `https://${groupData.history}`;
+            if (groupData.history.includes('https://')) {
+                aHistory.href = `${groupData.history}`;
+            } else {
+                aHistory.href = `https://${groupData.history}`;
+            };
             aHistory.target = "_blank";
-            //aHistory.innerText = "Click here"
+            aHistory.innerText = "Click here"
             document.getElementById("history").appendChild(aHistory);
             // document.getElementById("history").innerHTML = "Click here";
             // document.getElementById("history").href = `https://${groupData.history}`;
@@ -123,9 +132,13 @@ function fetchInfo(group) {
             let linkTextAgenda = document.createTextNode(groupData.agenda);
             aAgenda.appendChild(linkTextAgenda);
             aAgenda.title = "Click Here";
-            aAgenda.href = `https://${groupData.agenda}`;
+            if (groupData.agenda.includes('https://')) {
+                aAgenda.href = `${groupData.agenda}`
+            } else {
+                aAgenda.href = `https://${groupData.agenda}`;
+            };
             aAgenda.target = "_blank";
-            //aAgenda.innerText = "Click here"
+            aAgenda.innerText = "Click here"
             document.getElementById("agenda").appendChild(aAgenda);
             console.log(aEmail)
             console.log(aGroup)
