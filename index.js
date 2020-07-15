@@ -23,8 +23,7 @@ function fetchLead(leadName) {
              if (json.records[i]['id'] === leadName) {
                 let name = json.records[i]['fields']['Name'];
                 let leadEmail = json.records[i]['fields']['Email'];
-// console.log(json.records[i]['id'])
- //console.log('hey')
+
                 let aLead = document.createElement('a');
                 let linkTextGroup = document.createTextNode(name);
                 aLead.appendChild(linkTextGroup);
@@ -78,18 +77,19 @@ function fetchInfo(group) {
                     groupData.agenda = agendaDocument;
                     groupData.objectives = keyObjectives;
                     //console.log(groupData.folder)
-                    console.log(groupData.history)
+                    //console.log(groupData.history)
                 }
             }
             let leads = groupData.lead
             leadArray(leads);
             //fetchLead(groupData.lead);
-            console.log(leads)
+            //console.log(leads)
 
             let node1 = document.createElement("LI");
             let textnode1 = document.createTextNode(`${groupData.name} Working Group`);
             node1.appendChild(textnode1);
             document.getElementById("group").appendChild(node1);
+
 
             let aGroup = document.createElement('a');
             let linkTextGroup = document.createTextNode(groupData.folder);
@@ -103,6 +103,7 @@ function fetchInfo(group) {
             aGroup.target = "_blank";
             aGroup.innerText = "Click here"
             document.getElementById("groupName").appendChild(aGroup);
+
 
             let aEmail = document.createElement('a');
             let linkTextEmail = document.createTextNode(groupData.email);
@@ -123,9 +124,6 @@ function fetchInfo(group) {
             aHistory.target = "_blank";
             aHistory.innerText = "Click here"
             document.getElementById("history").appendChild(aHistory);
-            // document.getElementById("history").innerHTML = "Click here";
-            // document.getElementById("history").href = `https://${groupData.history}`;
-
 
 
             let aAgenda = document.createElement('a');
@@ -140,53 +138,20 @@ function fetchInfo(group) {
             aAgenda.target = "_blank";
             aAgenda.innerText = "Click here"
             document.getElementById("agenda").appendChild(aAgenda);
-            console.log(aEmail)
-            console.log(aGroup)
-            console.log(aHistory)
-            console.log(aAgenda)
+          
 
+            document.getElementById("keys").innerText = groupData.objectives;
 
             //document.getElementById("groupName").innerText = groupData.name;
             //document.getElementById("lead").innerText = groupData.lead;
             //document.getElementById("email").innerText = groupData.email;
             //document.getElementById("history").innerText = groupData.history;
             //document.getElementById("agenda").innerText = groupData.agenda;
-            document.getElementById("keys").innerText = groupData.objectives;
+console.log(keys)
 
 
 
-
-            console.log(groupData)
-
-            // var node2 = document.createElement("LI");
-            // var textnode2 = document.createTextNode("Shared Working Group Folder: " + groupData.folder);
-            // node2.appendChild(textnode2);
-            // document.getElementById("list").appendChild(node2);
-
-            // var node3 = document.createElement("LI");
-            // var textnode3 = document.createTextNode("Lead: " + groupData.lead);
-            // node3.appendChild(textnode3);
-            // document.getElementById("list").appendChild(node3);
-
-            // var node4 = document.createElement("LI");
-            // var textnode4 = document.createTextNode("Working Group Email List: " + groupData.email);
-            // node4.appendChild(textnode4);
-            // document.getElementById("list").appendChild(node4);
-
-            // var node5 = document.createElement("LI");
-            // var textnode5 = document.createTextNode("Group Email History: " + groupData.history);
-            // node5.appendChild(textnode5);
-            // document.getElementById("list").appendChild(node5);
-
-            // var node6 = document.createElement("LI");
-            // var textnode6 = document.createTextNode("Living Agenda Document: " + groupData.agenda);
-            // node6.appendChild(textnode6);
-            // document.getElementById("list").appendChild(node6);
-
-            // var node7 = document.createElement("LI");
-            // var textnode7 = document.createTextNode("Key Objectives: " + groupData.objectives);
-            // node7.appendChild(textnode7);
-            // document.getElementById("list").appendChild(node7);
+            
 
 
         });

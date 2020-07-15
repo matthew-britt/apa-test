@@ -7,8 +7,6 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>HASS-test</title>
     <style>
-        
-
         textarea {
             width: 100%;
             height: auto;
@@ -48,9 +46,14 @@ font-weight: 400;
             margin-left: 40px;
             font-size: 15px;
         }
+
         #keys {
             margin-left: 140px;
             font-size: 15px;
+        }
+
+        ul {
+            white-space: pre;
         }
 
         /* #info {
@@ -76,9 +79,10 @@ font-weight: 400;
             <h1 id="group"></h1>
             <div id="info">
                 <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
-                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Shared Working Group Folder:</span>
+                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Shared Working Group
+                        Folder:</span>
                     <span role="link" class="I4aHG">
-                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="groupName" > </span>
+                        <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="groupName"> </span>
                     </span>
                 </p>
                 <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
@@ -88,7 +92,8 @@ font-weight: 400;
                     </span>
                 </p>
                 <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
-                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Working Group Email List:</span>
+                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Working Group Email
+                        List:</span>
                     <span role="link" class="I4aHG">
                         <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="email"></span>
                     </span>
@@ -100,21 +105,23 @@ font-weight: 400;
                     </span>
                 </p>
                 <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
-                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Living Agenda Document</span>
+                    <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Living Agenda
+                        Document</span>
                     <span role="link" class="I4aHG">
                         <span style="text-decoration:underline;" class="aw5Odc" data-ri="2" id="agenda"></span>
                     </span>
                 </p>
-                
+
                 <p dir="ltr" role="presentation" class="zfr3Q theme_block_Paragraph">
                     <span style="font-family:'docs-Open sans';font-weight:700;" data-ri="0">Key Objectives:</span>
                     <span role="link" class="I4aHG">
-                        <span  class="aw5Odc" data-ri="2" id="objectives"></span>
+                        <span class="aw5Odc" data-ri="2" id="objectives"></span>
                     </span>
                 </p>
-                <ul id="keys" style="padding: 0px; list-style-type: square; margin-left: 40px; margin-right: 0px;" class="n8H08c UVNKR"></ul>
-                
-                
+                <ul id="keys" style="padding: 10px; list-style-type: square; margin-left: 40px; margin-right: 0px;"
+                    class="n8H08c UVNKR"></ul>
+
+
             </div>
             <div>
                 <div id="signup-div">
