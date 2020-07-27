@@ -12,8 +12,3 @@
 //             }
 //         })
 
-// function fetchLead(leadName) {
-//     fetch("https://api.airtable.com/v0/appI40FwYNAUQHKq3/Contacts?", {
-//         headers: {
-//             'Authorization': 'Bearer keyemv7utChwq4g5e'
-//         }
